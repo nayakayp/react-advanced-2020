@@ -14,7 +14,10 @@ const UseStateCounter = () => {
   };
   const handleIncLater = () => {
     setTimeout(() => {
-      setCounter(counter + 1);
+      // setCounter(counter + 1);
+      setCounter((prevState) => {
+        return prevState + 1;
+      });
     }, 1000);
   };
   return (
